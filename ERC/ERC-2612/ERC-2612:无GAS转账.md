@@ -122,10 +122,14 @@ DOMAIN_SEPARATOR = keccak256(
 
 ### 3.实例
 
+<img src="./pic1.png" width="500" alt="pic1 ">
+
 1. 用户B拿到用户A的签名我们就可以调用OP的 `permit`函数，对用户A的TOKEN就行授权。
 2. 我向一个空地址 `0x7112DDf035f1fF30fd9D463164da6c80795bDb19`(用户A)转了1个OP
 3. 然后通过permit函数授权 `0x596De5582cbeDEac1880aac59035C80C4e113875`(用户B)转走了0.1*-18E个OP到 `0x758e4E534AFBB044Dea64AB07e5d783fEc7e1541`(我在用的一个地址)
 4. 在这个过程过用户A没有支付任何GAS，两笔交易费用都由用户B承担了。
+
+<img src="./pic2.png" width="500" alt="pic1 ">
 
 ### 4.代码
 
