@@ -1,7 +1,5 @@
 # ERC-2612:无GAS转账
 
-# ERC-2612:无GAS实现ERC20代币的转账
-
 ## 实战例子
 
 当时看到ARB空投泄漏的私钥第一反应就是看下ARB是否可以使用 `permit`函数，等黑客领到币之后直接转走。后面再推特上看到这个大佬使用该方法帮助粉丝抢回一定的币。
@@ -62,8 +60,8 @@ function permit(
         require(block.timestamp <= deadline, "ERC20Permit: expired deadline");
 
         bytes32 structHash = keccak256(abi.encode(_PERMIT_TYPEHASH, owner, spender, value, _useNonce(owner), deadline));
-    
-    
+  
+  
 		 ////////////////// 这个这是hash的内容
         bytes32 hash = _hashTypedDataV4(structHash);   
          //////////////////
